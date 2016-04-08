@@ -38,7 +38,7 @@
 					<div id="preview-column-scroll">
 						<div id="document-update-log"></div>
 						<div id="document-title"> <script>document.write(basil.get('document-title'))</script> </div>
-						<script>document.write('<ul class="document-' + basil.get('document-width') + '" id="sortable"></ul>' )</script>
+						<script>document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )</script>
 						<script>document.write('<input type="hidden" id="document-content-cache" value="' + basil.get('document-content') + '" />')</script>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 									<script>
 										var $docWidth = basil.get('document-width');
 										//if ($docWidth == 1280)
-										document.write('<option selected>1280px</option>');
+										document.write('<option selected>1260px</option>');
 										document.write('<option selected>1024px</option>');
 										document.write('<option selected>768px</option>');
 										document.write('<option selected>568px</option>');

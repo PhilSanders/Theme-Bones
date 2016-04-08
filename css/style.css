@@ -41,35 +41,35 @@ html, body {
 
 /* document layout types */
 
-.document-1260 {
+.document-1260px {
   width: 1260px!important;
   min-width: 1260px!important;
   max-width: 1260px!important }
 
-.document-1080 {
-  width: 1080px!important;
-  min-width: 1080px!important;
-  max-width: 1080px!important }
+.document-1024px {
+  width: 1024px!important;
+  min-width: 1024px!important;
+  max-width: 1024px!important }
 
-.document-1000 {
-  width: 1000px!important;
-  min-width: 1000px!important;
-  max-width: 1000px!important }
-
-.document-800 {
-  width: 800px!important;
-  min-width: 800px!important;
-  max-width: 800px!important }
-
-.document-720 {
+.document-720px {
   width: 720px!important;
   min-width: 720px!important;
   max-width: 720px!important }
 
-.document-600 {
-  width: 600px!important;
-  min-width: 600px!important;
-  max-width: 600px!important }
+.document-568px {
+  width: 568px!important;
+  min-width: 568px!important;
+  max-width: 568px!important }
+
+.document-480px {
+  width: 480px!important;
+  min-width: 480px!important;
+  max-width: 480px!important }
+
+.document-320px {
+  width: 320x!important;
+  min-width: 320px!important;
+  max-width: 320px!important }
 
 /* editor window  columns ( Home | Preview | Tools | Options )  */
 
