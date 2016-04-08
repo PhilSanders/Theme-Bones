@@ -1,0 +1,24 @@
+{
+  "name": "themebones",
+  "homepage": "https://github.com/PhilSanders/Theme-Bones",
+  "authors": [
+    "Phil Sanders <philsanders79@gmail.com>"
+  ],
+  "description": "theme layout generator for wordpress",
+  "main": "index.html",
+  "keywords": [
+    ""
+  ],
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "basil.js": "^0.4.3",
+    "foundation": "~5.5.3",
+    "jquery-migrate": "^1.3.0",
+    "jquery-ui": "^1.11.4"
+  }
+}
