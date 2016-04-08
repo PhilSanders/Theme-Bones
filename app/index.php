@@ -55,56 +55,38 @@ $document_content = $_SESSION['document-content'];
 </script>
 
 <div id="home">
-
     <div id="content">
-    
-    <div class="row">
-    
-    	<br />
-    
-    	<div class="large-12 colums">
-        
-        	<img src="images/logo1.png" >
-        
-        
-        </div>
-        
-        <br />
-        
-        <div class="large-12 colums">
-        
-        <p>
-        
-            Theme-Bones is built on the Foundation grid system by Zurb. It is an experimental system created  to help design 
-    
-            new and useful wordpress theme layouts with a visually aided creative process. Like a WYSIWYG editor which is 
-    
-            dedicated to Wordpress theme layout development.
-        
-        </p>
-        
-        <p>
-        
-            Design your layout by adding common functionality like sidebars and menu areas. Create customized, responsive, 
-            
-            and engaging theme layouts with the Foundation system set and our easy to use tools and visual aids.
-        
-        </p>
-        
-        <a href="demo.php" class="button medium round secondary"> Try it out here </a>
-        
-        <p class="text-center">
-        
-        	<img src="images/preview-img-1.png" width="835" height="379"></div>
-    	
-        </p>
-        
-    </div>
-    
+		<div class="row">
+
+			<br />
+			<div class="large-12 colums">
+				<img src="images/logo1.png" >
+			</div>
+			<br />
+
+			<div class="large-12 colums">
+				<p>
+					Theme-Bones is built on the Foundation grid system by Zurb. It is an experimental system created  to help design
+					new and useful wordpress theme layouts with a visually aided creative process. Like a WYSIWYG editor which is
+					dedicated to Wordpress theme layout development.
+				</p>
+
+				<p>
+					Design your layout by adding common functionality like sidebars and menu areas. Create customized, responsive,
+					and engaging theme layouts with the Foundation system set and our easy to use tools and visual aids.
+				</p>
+
+				<a href="demo.php" class="button medium round secondary"> Try it out here </a>
+
+				<p class="text-center">
+					<img src="images/preview-img-1.png" width="835" height="379" />
+				</p>
+			</div>
+		</div>
     </div><!--content end-->
 </div><!--wrapper end-->
 
-<script>
+<script type="text/javascript">
   $(document).foundation('joyride','start');
 </script>
 
