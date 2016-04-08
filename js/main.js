@@ -14,7 +14,6 @@ basil = new window.Basil();
 
 */
 
-
 basil.set('username',			'Guest');
 basil.set('document-width',		'1024');
 basil.set('document-title',		'Document 1');
@@ -22,5 +21,3 @@ basil.set('document-content',	'');
 
 // Hello World!
 //console.log(basil.get('username'));
-
-
