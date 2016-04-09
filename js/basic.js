@@ -239,9 +239,7 @@ $(function(){
 							$("#document-title").html( document_name );
 							$("#document-title").effect("fade", {}, 500);
 						});
-						window.setTimeout( function(){
-							$("#document-update-log").effect("fade", {}, 1000);
-						}, 3000);
+						$("#document-update-log").effect("fade", {}, 2000);
 					});
 				}, 1000);
 			});
