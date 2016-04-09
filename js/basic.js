@@ -220,18 +220,16 @@ $(function(){
 				+ 'left: 0; width: 100%; top: 35%; text-align: center; font-weight: bold; color: #368a0d; font-size: 16px; opacity: 1;">'
 				+ '<img src="css/images/loading-circle.gif"></div>');
 
-				// ceate loading image layer
-
-				var document_content = $("#sortable").html();
-				var document_name = $(".document-name input").val();
-				var document_width = $('.document-width select option:selected').val();
-
-				//basil.set('username',			'Guest');
-				basil.set('document-width',		document_width);
-				basil.set('document-title',		document_name);
-				basil.set('document-content',	document_content);
+				// save session
 
 				window.setTimeout( function(){
+					var document_content = $("#sortable").html();
+					var document_name = $(".document-name input").val();
+					var document_width = $('.document-width select option:selected').val();
+					//basil.set('username',			'Guest');
+					basil.set('document-width',		document_width);
+					basil.set('document-title',		document_name);
+					basil.set('document-content',	document_content);
 					$('#load-over').fadeOut(100, function(){
 						$("#load-over-image").remove();
 						$("#load-over").remove();
@@ -241,13 +239,11 @@ $(function(){
 							$("#document-title").html( document_name );
 							$("#document-title").effect("fade", {}, 500);
 						});
-
 						window.setTimeout( function(){
 							$("#document-update-log").effect("fade", {}, 1000);
 						}, 3000);
 					});
 				}, 1000);
-
 			});
 		}, 100);
 	}
@@ -255,24 +251,10 @@ $(function(){
 	/* reset stage button */
 
 	function reset_session(){
-
-		var document_content = $("#sortable").html();
-		var request = $.ajax({
-			url: "inc/ajax-update-session.php",
-			type: "POST",
-			data: {reset_document_content : '1'},
-			dataType: "html"
-		});
-
-		request.done(function(msg) {
-			$("#document-update-log").html( 'updated' );
-			$("#document-update-log").fadeIn("fast");
-			$("#document-update-log").effect("fade", {}, 2000);
-		});
-
-		request.fail(function(jqXHR, textStatus) {
-			alert( "Request failed: " + textStatus );
-		});
+		basil.set('document-content',	'');
+		$("#document-update-log").html( 'updated' );
+		$("#document-update-log").fadeIn("fast");
+		$("#document-update-log").effect("fade", {}, 2000);
 	}
 
 	/* conntent menus */
