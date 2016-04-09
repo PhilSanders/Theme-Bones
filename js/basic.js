@@ -209,7 +209,7 @@ $(function(){
 
 	function save_session(){
 
-		$("#wrapper").before('<div id="load-over" style="position: absolute; width: 100%; height: 100%; left; margin-left: 168px; '
+		$("#wrapper").before('<div id="load-over" style="position: absolute; width: 100%; height: 100%; left; '
 		+ '0px; top; 0px; display: none; z-index: 20000; background: #FFF; opacity: .98; "></div>');
 
 		window.setTimeout( function(){
@@ -225,39 +225,29 @@ $(function(){
 				var document_content = $("#sortable").html();
 				var document_name = $(".document-name input").val();
 				var document_width = $('.document-width select option:selected').val();
-				var request = $.ajax({
-					url: "inc/ajax-update-session.php",
-					type: "POST",
-					data: {
-						update_document_title : encodeURI(document_name),
-						update_document_width : document_width,
-						update_document_content : encodeURI(document_content)
-					},
-					dataType: "html"
-				});
 
-				request.done(function(msg) {
-					window.setTimeout( function(){
-						$('#load-over').fadeOut(100, function(){
-							$("#load-over-image").remove();
-							$("#load-over").remove();
-							$("#document-update-log").html( 'Document Saved' );
-							$("#document-update-log").fadeIn("fast");
-							$("#document-title").effect("fade", {}, 500, function(){
-								$("#document-title").html( document_name );
-								$("#document-title").effect("fade", {}, 500);
-							});
+				//basil.set('username',			'Guest');
+				basil.set('document-width',		document_width);
+				basil.set('document-title',		document_name);
+				basil.set('document-content',	document_content);
 
-							window.setTimeout( function(){
-								$("#document-update-log").effect("fade", {}, 1000);
-							}, 3000);
+				window.setTimeout( function(){
+					$('#load-over').fadeOut(100, function(){
+						$("#load-over-image").remove();
+						$("#load-over").remove();
+						$("#document-update-log").html( 'Document Saved' );
+						$("#document-update-log").fadeIn("fast");
+						$("#document-title").effect("fade", {}, 500, function(){
+							$("#document-title").html( document_name );
+							$("#document-title").effect("fade", {}, 500);
 						});
-					}, 1000);
-				});
 
-				request.fail(function(jqXHR, textStatus) {
-					alert( "Request failed: " + textStatus );
-				});
+						window.setTimeout( function(){
+							$("#document-update-log").effect("fade", {}, 1000);
+						}, 3000);
+					});
+				}, 1000);
+
 			});
 		}, 100);
 	}
