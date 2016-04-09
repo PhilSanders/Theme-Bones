@@ -26,7 +26,7 @@ $(function(){
 			$('#load-over').fadeOut(1000, function(){
 				$("#load-over-image").remove();
 				$("#load-over").remove();
-				$('.preview-column').fadeIn(500, function(){
+				$('.editor-window').fadeIn(500, function(){
 						$('#footer').fadeIn(500);
 				});
 			});

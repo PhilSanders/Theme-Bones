@@ -28,114 +28,106 @@
 
 </head>
 <body>
-
 	<div id="wrapper">
-		<div id="content">
+		<div class="editor-window">
 
-			<!-- SORT TABLE AREA -->
-			<div class="preview-column">
-				<div class="small-7 columns" style="overflow: auto; border: 0px; padding: 0px; margin-left: 168px; height: 100%!important; min-height: 100%!important; max-height: 100%!important;">
-					<div id="preview-column-scroll">
-						<div id="document-update-log"></div>
-						<div id="document-title"> <script>document.write(basil.get('document-title'))</script> </div>
-						<script>document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )</script>
-						<script>document.write('<input type="hidden" id="document-content-cache" value="' + basil.get('document-content') + '" />')</script>
+			<div class="small-9 columns editor-window-panel">
+				<div id="preview-column-scroll">
+					<div id="document-update-log"></div>
+					<div id="document-title"> <script>document.write(basil.get('document-title'))</script> </div>
+					<script>document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )</script>
+					<script>document.write('<input type="hidden" id="document-content-cache" value="' + basil.get('document-content') + '" />')</script>
+				</div>
+			</div>
+
+			<div class="small-3 columns tools-panel">
+
+				<div class="toolpanel">
+					<h4>Toolbox</h4>
+					<strong>Content Grid Menu</strong>
+					<div id="grid-menu-resizable" class="grid-menu-scroll">
+						<ul id="grid-menu" class="twelve columns">
+							<div class="instructions"> Drag a icon on to the document stage to begin setting up your theme's columns and content positioning. </div>
+							<li class="small-1 column"><div class="inner"> <label>1x1</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-2 columns"><div class="inner"> <label>1x2</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-3 columns"><div class="inner"> <label>1x3</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-4 columns"><div class="inner"> <label>1x4</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-5 columns"><div class="inner"> <label>1x5</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-6 columns"><div class="inner"> <label>1x6</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-7 columns"><div class="inner"> <label>1x7</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-8 columns"><div class="inner"> <label>1x8</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-9 columns"><div class="inner"> <label>1x9</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-10 columns"><div class="inner"> <label>1x10</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-11 columns"><div class="inner"> <label>1x11</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-12 columns"><div class="inner"> <label>1x12</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+						</ul>
 					</div>
+					<ul id="grid-menu-dumby">
+						<!-- stuff grid objects here temporarily while moving to #sortable area -->
+					</ul>
 				</div>
 
-				<!-- RIGHT SIDE SPACE -->
-				<div class="tooloptions-column">
-					<div class="small-12">
-						<h4> Options </h4>
-						<strong> Document Title </strong>
-						<div id="menu-option" class="document-name">
-							<script>document.write('<input type="text" name="document-name" id="document-name" value="' + basil.get('document-title') + '" onFocus="this.select()">')</script>
-						</div>
+				<div class="toolpanel">
+					<h4> Options </h4>
+					<strong> Document Title </strong>
+					<div id="menu-option" class="document-name">
+						<script>document.write('<input type="text" name="document-name" id="document-name" value="' + basil.get('document-title') + '" onFocus="this.select()">')</script>
+					</div>
 
-						<strong> Page Width </strong>
+					<strong> Page Width </strong>
 
-						<div id="menu-option" class="document-width">
+					<div id="menu-option" class="document-width">
 
-							<form class="custom">
-								<label for="customDropdown">Label</label>
-								<select id="customDropdown" class="medium">
-									<script>
-										var $docWidth = basil.get('document-width');
-										//if ($docWidth == 1280)
-										document.write('<option selected>1260px</option>');
-										document.write('<option selected>1024px</option>');
-										document.write('<option selected>768px</option>');
-										document.write('<option selected>568px</option>');
-										document.write('<option selected>480px</option>');
-										document.write('<option selected>320px</option>');
-									</script>
-								</select>
-							</form>
-						</div>
+						<form class="custom">
+							<select id="customDropdown" class="medium">
+								<script>
+									var $docWidth = basil.get('document-width');
+									//if ($docWidth == 1280)
+									document.write('<option selected>1260px</option>');
+									document.write('<option selected>1024px</option>');
+									document.write('<option selected>768px</option>');
+									document.write('<option selected>568px</option>');
+									document.write('<option selected>480px</option>');
+									document.write('<option selected>320px</option>');
+								</script>
+							</select>
+						</form>
+					</div>
+
+					<!--
 						<br>
-
 						<strong> Destroy Box</strong>
 						<ul id="destroyer-bin">
 
 							destroy stuff here
 
 						</ul>
+					-->
 
-						<div id="menu-option">
-							<a id="reset" class="small button"> Reset Stage </a> <a id="save" class="small button"> Store Session </a>
-						</div>
-
+					<div id="menu-option">
+						<a id="reset" class="small button"> Reset Stage </a> <a id="save" class="small button"> Store Session </a>
 					</div>
-
-				</div> <!--sidebar 1 end-->
-
-				<!-- LEFT SIDE MENU -->
-				<div id="toolbox" class="tooloptions-column">
-					<div>
-						<h4>Toolbox</h4>
-						<strong>Content Grid Menu</strong>
-						<div id="grid-menu-resizable" class="grid-menu-scroll">
-							<ul id="grid-menu" class="twelve columns">
-								<div class="instructions"> Drag a icon on to the document stage to begin setting up your theme's columns and content positioning. </div>
-								<li class="small-1 column"><div class="inner"> <label>1x1</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-2 columns"><div class="inner"> <label>1x2</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-3 columns"><div class="inner"> <label>1x3</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-4 columns"><div class="inner"> <label>1x4</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-5 columns"><div class="inner"> <label>1x5</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-6 columns"><div class="inner"> <label>1x6</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-7 columns"><div class="inner"> <label>1x7</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-8 columns"><div class="inner"> <label>1x8</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-9 columns"><div class="inner"> <label>1x9</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-10 columns"><div class="inner"> <label>1x10</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-11 columns"><div class="inner"> <label>1x11</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-								<li class="small-12 columns"><div class="inner"> <label>1x12</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							</ul>
-						</div>
-					</div>
-
-					<ul id="grid-menu-dumby"> <!--stuff grid objects here temporarily while moving to #sortable area --></ul>
-
-				</div> <!--side 2 end-->
-
-				<div id="footer" class="floating-footer">
-					<div class="file-menu">
-						<ul>
-							<li><a id="save" href="javascript: void(0)">Save</a></li>
-							<li><a href="#">Zip</a></li>
-							<li><a href="#">Share</a></li>
-						</ul>
-					</div>
-					<h4>
-						<a href="#">
-							<b>W</b>P <br>
-							<span>_themebones</span>
-						</a>
-					</h4>
 				</div>
 
-			</div> <!-- main column end-->
-		</div><!--content end-->
-	</div><!--wrapper end-->
+			</div>
+		</div>
+
+		<div id="footer" class="floating-footer">
+			<div class="file-menu">
+				<ul>
+					<li><a id="save" href="javascript: void(0)">Save</a></li>
+					<li><a href="#">Zip</a></li>
+					<li><a href="#">Share</a></li>
+				</ul>
+			</div>
+			<h4>
+				<a href="#">
+					<b>W</b>P <br>
+					<span>_themebones</span>
+				</a>
+			</h4>
+		</div>
+	</div>
 
 	<!-- build:js js/jquery.min.js -->
 		<script type='text/javascript' src='bower_components/jquery/dist/jquery.min.js'></script>

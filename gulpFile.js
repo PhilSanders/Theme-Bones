@@ -1,7 +1,7 @@
 /*
-	Themebones Tempplate Generator for Wordpress
-	Author: Phil Sanders
-	Email: philsanders@gmail.com
+	Themebones Template Generator for Wordpress
+	Author: Phil Sanders, Sourcetoad
+	Email: phil@sourcetoad.com
 */
 
 var gulp = require('gulp'),
