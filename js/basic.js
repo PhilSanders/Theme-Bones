@@ -58,7 +58,7 @@ $(function(){
 	$("#grid-menu li").sortable('destroy').draggable('destroy').draggable({
 		connectToSortable: "#sortable",
 		scroll: false,
-		appendTo: '#grid-menu-dumby',
+		appendTo: 'body',
 		revert: "invalid",
 		containment: '#equipCont',
 		helper: function (e, ui) {

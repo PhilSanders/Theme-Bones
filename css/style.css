@@ -91,10 +91,11 @@ html, body {
 
 .toolpanel {
 	margin: 0px;
-	padding: 20px;
+	padding: 10px 10px 20px;
 	width: 100%;
 	position: relative;
 	float: right;
+	border-bottom: 1px #CCC solid;
 	box-shadow: inset 0px 1px 0px #FFF, inset 1px 0px 0px #FFF, inset -1px 0px 0px #FFF;
 }
 
@@ -157,7 +158,8 @@ html, body {
 
 #grid-menu {
 	list-style: none;
-	padding: 0px;
+	padding: 0;
+	margin: 0;
 }
 
 #grid-menu:hover {
@@ -205,17 +207,16 @@ html, body {
 	box-shadow: inset 0px 0px 1px #FFF, 0px 0px 20px #dcdcdc;
 }
 
-#sortable li,
-#grid-menu  li,
-#grid-menu-dumby li {
+#sortable .grid-item,
+#grid-menu  .grid-item,
+body .grid-item {
 	float: left;
-	postion: absolute;
 	display: inline-block;
 	padding: 1px;
 }
 
-#grid-menu li,
-#grid-menu-dumby li {
+#grid-menu .grid-item,
+body .grid-item {
 	float: none;
 	display: block;
 }
@@ -224,9 +225,9 @@ html, body {
 	ul li (css style )
 */
 
-#sortable li div,
-#grid-menu li div,
-#grid-menu-dumby li div {
+#sortable .grid-item div,
+#grid-menu .grid-item div,
+body .grid-item div {
 	text-align:center;
 	font-weight: 600;
 	background-color: #dce9ed;
@@ -239,7 +240,7 @@ html, body {
 	border-radius: 2px;
 }
 
-#sortable li div label {
+#sortable .grid-item div label {
 	font-weight: 600;
 	position: relative;
 	margin: 0px auto;
@@ -248,8 +249,8 @@ html, body {
 	top: 45%;
 }
 
-#grid-menu li div,
-#grid-menu-dumby li div {
+#grid-menu .grid-item div,
+body .grid-item div {
 	background-color: #e0cfe4;
 	box-shadow: inset -1px -1px 0px #fad4f8, inset -1px -3px 5px #d194cd;
 	padding: 0px;
@@ -258,10 +259,10 @@ html, body {
 	font-size: 10px;
 }
 
-#grid-menu li div:hover,
-#grid-menu-dumby li div:hover,
-#grid-menu li div:focus,
-#grid-menu-dumby li div:focus {
+#grid-menu .grid-item div:hover,
+body .grid-item div:hover,
+#grid-menu .grid-item div:focus,
+body .grid-item div:focus {
 	background-color: #dce9ed;
 	box-shadow: 0px 2px 12px #AAA;
 	-webkit-transition: background-color 300ms ease-out;
@@ -269,8 +270,8 @@ html, body {
 	transition: background-color 300ms ease-out;
 }
 
-#grid-menu li div label,
-#grid-menu-dumby li div label {
+#grid-menu .grid-item div label,
+body .grid-item div label {
 	font-weight: 400;
 	position: relative;
 	margin: 0px auto;
@@ -280,15 +281,15 @@ html, body {
 	top: 5px;
 }
 
-#sortable li div:hover,
-#sortable li div:focus {
+#sortable .grid-item div:hover,
+#sortable .grid-item div:focus {
 	background-color: #daeeca; box-shadow: none;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
 
-#sortable li div:hover > input {
+#sortable .grid-item div:hover > input {
 	opacity: 1;
 	-webkit-transition: opacity 300ms ease-out;
 	-moz-transition: opacity 300ms ease-out;
@@ -299,8 +300,8 @@ html, body {
 	ul li div input ( destroy button )
 */
 
-#grid-menu li div input,
-#grid-menu-dumby li div input {
+#grid-menu .grid-item div input,
+body .grid-item div input {
 	display: none;
 }
 
@@ -337,7 +338,7 @@ html, body {
 	transition: opacity 300ms ease-out;
 }
 
-#sortable li div input {
+#sortable .grid-item div input {
 	display: block;
 	opacity: 0;
 	float: left;
@@ -349,7 +350,7 @@ html, body {
 	font-size: 9px;
 }
 
-#sortable li div.ui-resizable div.ui-resizable-se {
+#sortable .grid-item div.ui-resizable div.ui-resizable-se {
 	padding: 0px;
 	margin: -2px;
 	height: 20px;
