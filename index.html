@@ -34,9 +34,17 @@
 			<div class="small-9 columns editor-window-panel">
 				<div id="preview-column-scroll">
 					<div id="document-update-log"></div>
-					<div id="document-title"> <script>document.write(basil.get('document-title'))</script> </div>
-					<script>document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )</script>
-					<script>document.write('<input type="hidden" id="document-content-cache" value="' + basil.get('document-content') + '" />')</script>
+					<div id="document-title">
+						<script>
+							document.write(basil.get('document-title'))
+						</script>
+					</div>
+					<script>
+						document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )
+					</script>
+					<script>
+						document.write('<input type="hidden" id="document-content-cache" value="' + basil.get('document-content') + '" />')
+					</script>
 				</div>
 			</div>
 
@@ -48,18 +56,78 @@
 					<div id="grid-menu-resizable" class="grid-menu-scroll">
 						<ul id="grid-menu" class="twelve columns">
 							<!--div class="instructions"> Drag a icon on to the document stage to begin setting up your theme's columns and content positioning. </div-->
-							<li class="small-1 column grid-item"><div class="inner"> <label>1x1</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-2 columns grid-item"><div class="inner"> <label>1x2</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-3 columns grid-item"><div class="inner"> <label>1x3</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-4 columns grid-item"><div class="inner"> <label>1x4</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-5 columns grid-item"><div class="inner"> <label>1x5</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-6 columns grid-item"><div class="inner"> <label>1x6</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-7 columns grid-item"><div class="inner"> <label>1x7</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-8 columns grid-item"><div class="inner"> <label>1x8</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-9 columns grid-item"><div class="inner"> <label>1x9</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-10 columns grid-item"><div class="inner"> <label>1x10</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-11 columns grid-item"><div class="inner"> <label>1x11</label> <input type="button" class="button small alert" name="delete" value="x"></div>
-							<li class="small-12 columns grid-item"><div class="inner"> <label>1x12</label> <input type="button" class="button small alert" name="delete" value="x"></div>
+							<li class="small-1 column grid-item">
+								<div class="inner">
+									<label>1x1</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-2 columns grid-item">
+								<div class="inner">
+									<label>1x2</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-3 columns grid-item">
+								<div class="inner">
+									<label>1x3</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-4 columns grid-item">
+								<div class="inner">
+									<label>1x4</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-5 columns grid-item">
+								<div class="inner">
+									<label>1x5</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-6 columns grid-item">
+								<div class="inner">
+									<label>1x6</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-7 columns grid-item">
+								<div class="inner">
+									<label>1x7</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-8 columns grid-item">
+								<div class="inner">
+									<label>1x8</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-9 columns grid-item">
+								<div class="inner">
+									<label>1x9</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-10 columns grid-item">
+								<div class="inner">
+									<label>1x10</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-11 columns grid-item">
+								<div class="inner">
+									<label>1x11</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
+							<li class="small-12 columns grid-item">
+								<div class="inner">
+									<label>1x12</label>
+									<input type="button" class="button small alert" name="delete" value="x">
+								</div>
+							</li>
 						</ul>
 					</div>
 					<ul id="grid-menu-dumby">
@@ -72,7 +140,10 @@
 					<h4> Options </h4>
 					<strong> Document Title </strong>
 					<div id="menu-option" class="document-name">
-						<script>document.write('<input type="text" name="document-name" id="document-name" value="' + basil.get('document-title') + '" onFocus="this.select()">')</script>
+						<script>
+							document.write('<input type="text" name="document-name" id="document-name" value="' +
+										   basil.get('document-title') + '" onFocus="this.select()">');
+						</script>
 					</div>
 
 					<strong> Page Width </strong>
