@@ -9,6 +9,9 @@
 	<!-- build:css css/foundation.min.css -->
 		<link rel="stylesheet" type="text/css" href="/bower_components/foundation/css/foundation.min.css" />
 		<!-- endbuild -->
+	<!-- build:css css/fontawesome.min.css -->
+		<link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+		<!-- endbuild -->
 	<!-- build:css css/main.css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<!-- endbuild -->
@@ -55,9 +58,9 @@
 				</div>
 			</div>
 
-			<div class="small-3 columns tools-panel">
+			<div class="small-3 columns editor-tools-panel">
 
-				<div class="toolpanel">
+				<div class="tool-panel">
 					<h5 class="tool-panel-title">Grid Elements</h5>
 					<div class="menu-option">
 						<div id="grid-menu-resizable" class="grid-menu-scroll">
@@ -140,18 +143,18 @@
 					</div>
 				</div>
 
-				<div class="toolpanel">
-					<h5 class="tool-panel-title"> Document </h5>
+				<div class="tool-panel">
+					<h5 class="tool-panel-title"> Document Settings</h5>
 					<div id="menu-option" class="menu-option document-name">
+						<strong>Document Name</strong>
 						<script>
 							document.write('<input type="text" name="document-name" id="document-name" value="' +
 										   basil.get('document-title') + '" onFocus="this.select()">');
 						</script>
 					</div>
 
-					<h5 class="tool-panel-title"> Document </h5>
 					<div id="menu-option" class="menu-option document-width">
-
+						<strong>Document Width</strong>
 						<form class="custom">
 							<select id="customDropdown" class="medium">
 								<script>
@@ -167,21 +170,27 @@
 							</select>
 						</form>
 					</div>
+				</div>
 
-					<!--
-						<br>
-						<strong> Destroy Box</strong>
+				<div class="tool-panel">
+					<h5 class="tool-panel-title">Trash</h5>
+					<div class="menu-option">
 						<ul id="destroyer-bin">
-
 							destroy stuff here
-
 						</ul>
-					-->
-
-					<div id="menu-option" class="menu-option">
-						<a id="reset" class="small button"> Reset Stage </a> <a id="save" class="small button"> Store Session </a>
 					</div>
 				</div>
+
+				<div class="tool-panel tool-action">
+				<div id="menu-option" class="menu-option">
+					<a id="reset" class="small button">
+						Reset Stage
+					</a>
+					<a id="save" class="small button">
+						Store Session
+					</a>
+				</div>
+			</div>
 
 			</div>
 		</div>

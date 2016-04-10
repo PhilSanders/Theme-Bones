@@ -93,7 +93,7 @@ h1,h2,h3,h4,h5,h6,
 	Tools panel
 */
 
-.tools-panel {
+.editor-tools-panel {
 	padding-left: 0;
 	padding-right: 0;
 	height: calc(100% - 25px);
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6,
 	overflow: auto;
 }
 
-.toolpanel {
+.tool-panel {
 	margin: 0px;
 	padding: 0 0 10px;
 	width: 100%;
@@ -112,26 +112,113 @@ h1,h2,h3,h4,h5,h6,
 	box-shadow: inset 0px 1px 0px #FFF, inset 1px 0px 0px #FFF, inset -1px 0px 0px #FFF;
 }
 
-.toolpanel .tool-panel-title {
+.tool-panel .tool-panel-title {
 	margin: 0;
 	padding: 6px 4px 0px 10px;
 }
 
-.toolpanel .menu-option {
-	padding: 10px;
+.tool-panel .menu-option {
+	padding: 10px 10px 0;
 }
 
-.toolpanel strong {
-	font-size: 14px;
+.tool-panel .menu-option input,
+.tool-panel .menu-option select {
+	margin-bottom: 0;
+}
+
+.tool-panel strong {
+	font-size: 10px;
 	color: #555;
 	text-shadow: 0px 1px 1px #FFF;
 }
 
-.toolpanel div h4 {
+.tool-panel div h4 {
 	border-bottom: 1px #FFF solid;
 	box-shadow: 0px 1px 0px #AAA;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
+}
+
+/*
+	action panel
+*/
+
+.tool-panel.tool-action {
+	text-align: center;
+	position:fixed;
+	height: 50px;
+	bottom: 0;
+	background: #EFEFEF;
+	transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-safari-transform: translateY(-100%);
+}
+
+.tool-panel.tool-action .menu-option {
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	width: 100%;
+}
+
+.tool-panel.tool-action .button {
+	margin-bottom: 0;
+}
+
+/*
+	Main Button ++ Options Areas
+*/
+
+.menu-option #reset:hover,
+.menu-option #save:hover {
+	background: #37bee6;
+	color: #12323c;
+}
+
+/*
+	Destroy box
+*/
+
+#destroyer-bin {
+	list-style: none;
+	text-align: center;
+	line-height: 4;
+	margin-top: 10px;
+	border-radius: 4px;
+	background: #FAFAFA;
+	text-shadow: 0px 1px 0px #FFF;
+	color: #AAA;
+	border: 1px #BBB solid;
+	box-shadow: inset 0px 2px 6px #AAA;
+}
+
+#destroyer-bin:hover {
+	border-color: #c32c68;
+	box-shadow: inset 0px 2px 6px #CCC;
+}
+
+/*
+	Options Buttons and Options Areas
+*/
+
+.menu-option {
+	padding-top: 10px;
+}
+
+.menu-option input,
+.menu-option select {
+	padding: 8px;
+	font-weight: 600;
+	color: #999;
+}
+
+.menu-option:hover > input,
+.menu-option:hover > select,
+.menu-option input:hover,
+.menu-option select:hover {
+	color: #333;
 }
 
 /*
@@ -239,9 +326,9 @@ body .grid-item {
 	ul li (css style )
 */
 
-#sortable .grid-item div,
-#grid-menu .grid-item div,
-body .grid-item div {
+#sortable .grid-item .inner,
+#grid-menu .grid-item .inner,
+body .grid-item .inner {
 	text-align:center;
 	font-weight: 600;
 	background-color: #dce9ed;
@@ -254,7 +341,7 @@ body .grid-item div {
 	border-radius: 2px;
 }
 
-#sortable .grid-item div label {
+#sortable .grid-item .inner label {
 	font-weight: 600;
 	position: relative;
 	margin: 0px auto;
@@ -263,8 +350,8 @@ body .grid-item div {
 	top: 45%;
 }
 
-#grid-menu .grid-item div,
-body .grid-item div {
+#grid-menu .grid-item .inner,
+body .grid-item .inner {
 	background-color: #e0cfe4;
 	box-shadow: inset -1px -1px 0px #fad4f8, inset -1px -3px 5px #d194cd;
 	padding: 0px;
@@ -273,10 +360,10 @@ body .grid-item div {
 	font-size: 10px;
 }
 
-#grid-menu .grid-item div:hover,
-body .grid-item div:hover,
-#grid-menu .grid-item div:focus,
-body .grid-item div:focus {
+#grid-menu .grid-item .inner:hover,
+body .grid-item .inner:hover,
+#grid-menu .grid-item .inner:focus,
+body .grid-item .inner:focus {
 	background-color: #dce9ed;
 	box-shadow: 0px 2px 12px #AAA;
 	-webkit-transition: background-color 300ms ease-out;
@@ -284,8 +371,8 @@ body .grid-item div:focus {
 	transition: background-color 300ms ease-out;
 }
 
-#grid-menu .grid-item div label,
-body .grid-item div label {
+#grid-menu .grid-item .inner label,
+body .grid-item .inner label {
 	font-weight: 400;
 	position: relative;
 	margin: 0px auto;
@@ -295,15 +382,15 @@ body .grid-item div label {
 	top: 5px;
 }
 
-#sortable .grid-item div:hover,
-#sortable .grid-item div:focus {
+#sortable .grid-item .inner:hover,
+#sortable .grid-item .inner:focus {
 	background-color: #daeeca; box-shadow: none;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
 
-#sortable .grid-item div:hover > input {
+#sortable .grid-item .inner:hover > input {
 	opacity: 1;
 	-webkit-transition: opacity 300ms ease-out;
 	-moz-transition: opacity 300ms ease-out;
@@ -314,8 +401,8 @@ body .grid-item div label {
 	ul li div input ( destroy button )
 */
 
-#grid-menu .grid-item div input,
-body .grid-item div input {
+#grid-menu .grid-item .inner input,
+body .grid-item .inner input {
 	display: none;
 }
 
@@ -352,7 +439,7 @@ body .grid-item div input {
 	transition: opacity 300ms ease-out;
 }
 
-#sortable .grid-item div input {
+#sortable .grid-item .inner input {
 	display: block;
 	opacity: 0;
 	float: left;
@@ -364,7 +451,7 @@ body .grid-item div input {
 	font-size: 9px;
 }
 
-#sortable .grid-item div.ui-resizable div.ui-resizable-se {
+#sortable .grid-item .inner.ui-resizable .inner.ui-resizable-se {
 	padding: 0px;
 	margin: -2px;
 	height: 20px;
@@ -372,67 +459,6 @@ body .grid-item div input {
 	border-radius: 4px 0px 4px 0px;
 	background-color: transparent;
 	cursor: se-resize;
-}
-
-/*
-	Main Button ++ Options Areas
-*/
-
-#menu-option #reset,
-#menu-option #save {
-	margin-bottom: 20px;
-}
-
-#menu-option #reset:hover,
-#menu-option #save:hover {
-	background: #37bee6;
-	color: #12323c;
-}
-
-/*
-	Destroy box
-*/
-
-#destroyer-bin {
-	list-style: none;
-	height: 200px;
-	width: 100%;
-	text-align: center;
-	line-height: 4;
-	margin-top: 10px;
-	border-radius: 4px;
-	background: #FAFAFA;
-	text-shadow: 0px 1px 0px #FFF;
-	color: #AAA;
-	border: 1px #BBB solid;
-	box-shadow: inset 0px 2px 6px #AAA;
-}
-
-#destroyer-bin:hover {
-	border-color: #c32c68;
-	box-shadow: inset 0px 2px 6px #CCC;
-}
-
-/*
-	Options Buttons and Options Areas
-*/
-
-#menu-option {
-	padding-top: 10px;
-}
-
-#menu-option input,
-#menu-option select {
-	padding: 8px;
-	font-weight: 600;
-	color: #999;
-}
-
-#menu-option:hover > input,
-#menu-option:hover > select,
-#menu-option input:hover,
-#menu-option select:hover {
-	color: #333;
 }
 
 
@@ -591,7 +617,6 @@ body .grid-item div input {
 
 /* Webkit ++ Safari Selectable Text Color  */
 
-.home-column div::selection,
 textarea::selection,
 option::selection,
 input::selection {
@@ -604,10 +629,6 @@ input::selection {
 	background: #DDD; /* Firefox */
 }
 
-.home-column div::-moz-selection,
-.home-column a::-moz-selection,
-.home-column b::-moz-selection,
-.home-column div strong::-moz-selection,
 textarea::-moz-selection,
 option::-moz-selection,
 input::-moz-selection {
