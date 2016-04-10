@@ -13,22 +13,22 @@ $(function(){
 
 	// ceate loading image layer
 
-	$("#wrapper").before('<div id="load-over"></div>');
+	$("#wrapper").before('<div class="load-over"></div>');
 
-	$('#load-over').fadeIn(1000, function(){
+	$('.load-over').fadeIn(1000, function(){
 
-		$("#load-over").after(
-			'<div id="load-over-image">'
+		$(".load-over").after(
+			'<div class="load-over-image">'
 			+ '<i class="fa fa-spinner fa-spin"></i>'
 			+'</div>'
 		);
 
 		window.setTimeout( function(){
-			$('#load-over').fadeOut(1000, function(){
-				$("#load-over-image").remove();
-				$("#load-over").remove();
+			$('.load-over').fadeOut(1000, function(){
+				$(".load-over-image").remove();
+				$(".load-over").remove();
 				$('.editor-window').fadeIn(500, function(){
-						$('#footer').fadeIn(500);
+						$('footer').fadeIn(500);
 				});
 			});
 		}, 1500);
@@ -202,7 +202,7 @@ $(function(){
 	$("#grid-menu").disableSelection();
 	$("#toolbox").disableSelection();
 	$("#home").disableSelection();
-	$("#footer").disableSelection();
+	$("footer").disableSelection();
 
 	/* store to session / save button */
 
