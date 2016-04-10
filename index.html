@@ -29,16 +29,23 @@
 </head>
 <body>
 	<div id="wrapper">
+
 		<div class="editor-window">
+
+			<div class="editor-menu">
+				<!--ul>
+					<li>File</li>
+				</ul-->
+				<h5 class="document-title">
+					<script>
+						document.write(basil.get('document-title'))
+					</script>
+				</h5>
+			</div>
 
 			<div class="small-9 columns editor-window-panel">
 				<div id="preview-column-scroll">
 					<div id="document-update-log"></div>
-					<div id="document-title">
-						<script>
-							document.write(basil.get('document-title'))
-						</script>
-					</div>
 					<script>
 						document.write('<ul class="document-' + basil.get('document-width') + 'px" id="sortable"></ul>' )
 					</script>
@@ -130,9 +137,6 @@
 							</li>
 						</ul>
 					</div>
-					<ul id="grid-menu-dumby">
-						<!-- stuff grid objects here temporarily while moving to #sortable area -->
-					</ul>
 				</div>
 
 				<div class="toolpanel">

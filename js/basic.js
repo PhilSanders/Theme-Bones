@@ -235,9 +235,9 @@ $(function(){
 						$("#load-over").remove();
 						$("#document-update-log").html( 'Document Saved' );
 						$("#document-update-log").fadeIn("fast");
-						$("#document-title").effect("fade", {}, 500, function(){
-							$("#document-title").html( document_name );
-							$("#document-title").effect("fade", {}, 500);
+						$(".document-title").effect("fade", {}, 500, function(){
+							$(".document-title").html( document_name );
+							$(".document-title").effect("fade", {}, 500);
 						});
 						$("#document-update-log").effect("fade", {}, 2000);
 					});
