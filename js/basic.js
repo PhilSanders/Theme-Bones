@@ -13,14 +13,15 @@ $(function(){
 
 	// ceate loading image layer
 
-	$("#wrapper").before('<div id="load-over" style="position: absolute; width: 100%; height: 100%; '
-	+ '0px; top; 0px; display: none; z-index: 10000; background: #FFF; opacity: .5; "></div>');
+	$("#wrapper").before('<div id="load-over"></div>');
 
 	$('#load-over').fadeIn(1000, function(){
 
-		$("#load-over").after('<div id="load-over-image" style="position: absolute; z-index: 20000;'
-		+ 'left: 0; width: 100%; top: 35%; text-align: center; font-weight: bold; color: #368a0d; font-size: 16px; opacity: 1;">'
-		+ '<img src="css/images/loading-circle.gif"></div>');
+		$("#load-over").after(
+			'<div id="load-over-image">'
+			+ '<i class="fa fa-spinner fa-spin"></i>'
+			+'</div>'
+		);
 
 		window.setTimeout( function(){
 			$('#load-over').fadeOut(1000, function(){
