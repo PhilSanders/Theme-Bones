@@ -104,8 +104,8 @@ h1,h2,h3,h4,h5,h6,
 }
 
 .tool-panel {
-	margin: 0px;
-	padding: 0 0 10px;
+	margin: 0;
+	padding: 0;
 	width: 100%;
 	position: relative;
 	float: right;
@@ -207,7 +207,7 @@ h1,h2,h3,h4,h5,h6,
 */
 
 .menu-option {
-	padding-top: 10px;
+	padding-top: 10;
 }
 
 .menu-option input,
@@ -614,10 +614,10 @@ footer h4 a:hover > b {
 
 .slimScrollBar {
 	border-radius: 0!important;
-	border: 0px #1e728c solid;
-	box-shadow: inset 0px 0px 1px #1e728c, inset 0 0 6px rgba(255,255,255,0.5);
-	-moz-box-shadow: inset 0px 0px 1px rgba(15,30,38,0.5), inset 0 0 6px rgba(255,255,255,0.5);
-	-webkit-box-shadow: inset 0px 0px 1px rgba(15,30,38,0.5), inset 0 0 6px rgba(255,255,255,0.5);
+	border: 0px #007095 solid;
+	box-shadow: inset 0px 0px 1px #007095, inset 0 0 6px rgba(255,255,255,0.5);
+	-moz-box-shadow: inset 0px 0px 1px rgb(0, 112, 149), inset 0 0 6px rgba(255,255,255,0.5);
+	-webkit-box-shadow: inset 0px 0px 1px rgb(0, 112, 149), inset 0 0 6px rgba(255,255,255,0.5);
 }
 
 .slimScrollRail {
