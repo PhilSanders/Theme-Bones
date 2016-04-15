@@ -210,16 +210,15 @@ $(function(){
 
 	function save_session(){
 
-		$("#wrapper").before('<div id="load-over" style="position: absolute; width: 100%; height: 100%; left; '
-		+ '0px; top; 0px; display: none; z-index: 20000; background: #FFF; opacity: .98; "></div>');
+		$("#wrapper").before('<div class="load-over"></div>');
 
 		window.setTimeout( function(){
 
 			$('#load-over').fadeIn(500, function(){
 
-				$("#load-over").after('<div id="load-over-image" style="position: absolute; z-index: 20000;'
-				+ 'left: 0; width: 100%; top: 35%; text-align: center; font-weight: bold; color: #368a0d; font-size: 16px; opacity: 1;">'
-				+ '<img src="css/images/loading-circle.gif"></div>');
+				$("#load-over").after('<div class="load-over-image">'
+				+ '<i class="fa fa-spinner fa-spin"></i>'
+				+ '</div>');
 
 				// save session
 
@@ -232,8 +231,8 @@ $(function(){
 					basil.set('document-title',		document_name);
 					basil.set('document-content',	document_content);
 					$('#load-over').fadeOut(100, function(){
-						$("#load-over-image").remove();
-						$("#load-over").remove();
+						$(".load-over-image").remove();
+						$(".load-over").remove();
 						$("#document-update-log").html( 'Document Saved' );
 						$("#document-update-log").fadeIn("fast");
 						$(".document-title").effect("fade", {}, 500, function(){
